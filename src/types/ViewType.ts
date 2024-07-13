@@ -1,0 +1,1 @@
+export type ViewType = 'grid' | 'carousel' | 'list' | 'cards';

@@ -1,0 +1,39 @@
+.CatGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr; 
+  }
+
+.col  {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+  }
+  
+  .col img  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scale the image to cover the container */
+    object-position: center; /* Center the image */
+  }
+  
+}

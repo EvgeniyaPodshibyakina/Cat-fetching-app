@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Cats from './sections/Cats/Cats';
+import { ButtonGroup, Container, Button } from 'react-bootstrap';
+import { ViewType } from './types/ViewType';
+import './App.scss';
 
-function App() {
+
+const App: React.FC = () => {
+  const [viewType, setViewType] = useState<ViewType>('grid');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='App'>
+      <h1 className="header">Cat Photos</h1>
+      <ButtonGroup className="mb-4">
+        <Button onClick={() => setViewType('grid')}>Grid</Button>
+        <Button onClick={() => setViewType('carousel')}>Carousel</Button>
+        <Button onClick={() => setViewType('list')}>List</Button>
+        <Button onClick={() => setViewType('cards')}>Cards</Button>
+      </ButtonGroup>
+      <Cats viewType={viewType} />
+    </Container>
   );
-}
+};
+
 
 export default App;

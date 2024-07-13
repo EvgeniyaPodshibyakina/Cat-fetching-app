@@ -1,0 +1,25 @@
+ /* Card Layout */
+ .CatCards {
+    margin-top: 20px;
+  
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      
+    .card .text {
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .text h5 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+    
+    .text p {
+      margin: 0;
+    }
+    
+
+}
