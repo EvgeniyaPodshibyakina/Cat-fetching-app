@@ -1,19 +1,20 @@
 # Flowbox-test-assignment
 
 Objectives
-● Create a custom hook to fetch content (photos) from an API using Fetch AP (or mocking these calls with some predefined data).
-● Store data from API in a global state using Context API, Redux, MobX, Zustand, or whichever state management method you prefer.
-● Provide a way for the user to select the manner in which the content (photos) will be displayed (Grid, Carousel/Slider, list view and Cards). You don’t need to do it manually, and using third-party library(ies) is totally fine. See examples on the second page.
-● User should be able to quickly change between these three different layout types
-● Be sure to include unit testing using any framework of your choice.
-● Create a github repo containing your app and share the link in an email once you have
-completed the task.
+<ul>
+<li>Create a custom hook to fetch content (photos) from an API using Fetch AP (or mocking these calls with some predefined data).</li>
+<li>Store data from API in a global state using Context API, Redux, MobX, Zustand, or whichever state management method you prefer.</li>
+<li>Provide a way for the user to select the manner in which the content (photos) will be displayed (Grid, Carousel/Slider, list view and Cards). You don’t need to do it manually, and using third-party library(ies) is totally fine.</li>
+<li>User should be able to quickly change between these three different layout types</li>
+<li>Be sure to include unit testing using any framework of your choice.</li>
+<li>Create a github repo containing your app and share the link in an email once you have
+completed the task.</li>
+</ul>
 
-
-**Needs Node ">=18" to run**
 
 ## Available Scripts
 
+**Needs Node ">=18" to run**</br>
 In the project directory, you can run:
 
 ### `yarn`
