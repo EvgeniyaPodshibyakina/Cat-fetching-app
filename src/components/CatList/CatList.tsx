@@ -26,3 +26,4 @@ export const CatList:React.FC = () => {
       </div>
   )
 }
+export default CatList

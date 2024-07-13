@@ -3,7 +3,7 @@ import { useAppSelector } from '../../hooks/reduxHooks';
 import './CatGrid.scss'
 
 
-export const CatGrid:React.FC = () => {
+ const CatGrid:React.FC = () => {
   const { cats } = useAppSelector((state) => state.cats) || [];
   return (
     <div className="CatGrid" data-testid="cat-grid-view">
@@ -18,3 +18,4 @@ export const CatGrid:React.FC = () => {
   </div>
   )
 }
+export default CatGrid

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useAppSelector } from '../../hooks/reduxHooks';
 import './CatCarousel.scss';
 
-export const CatCarousel:React.FC = () => {
+ const CatCarousel:React.FC = () => {
   const { cats } = useAppSelector((state) => state.cats) || [];
   return (
     <Carousel className='CatCarousel' data-testid="cat-carousel-view">
@@ -22,3 +22,4 @@ export const CatCarousel:React.FC = () => {
       </Carousel>
   )
 }
+export default CatCarousel

@@ -1,19 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense ,useEffect } from 'react';
 import { useGetCatsQuery } from '../../services/api';
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks';
-import { CatCards } from '../../components/CatCards/CatCards';
-import { CatGrid } from '../../components/CatGrid/CatGrid';
-import { CatCarousel } from '../../components/CatCarousel/CatCarousel';
-import { CatList } from '../../components/CatList/CatList';
 import { CatsProps } from './types/CatsProps';
+const CatCards = lazy(() => import('../../components/CatCards/CatCards'));
+const CatGrid = lazy(() => import('../../components/CatGrid/CatGrid'));
+const CatCarousel = lazy(() => import('../../components/CatCarousel/CatCarousel'));
+const CatList = lazy(() => import('../../components/CatList/CatList'));
 
 const Cats: React.FC<CatsProps> = ({ viewType }) => {
   const dispatch = useAppDispatch();
   const { data, error, isLoading } = useGetCatsQuery(10); // Fetch 10 cat images
   const status = useAppSelector((state) => state.cats.status);  
-  console.log(status);
-  
-  console.log(data);
   
 
   useEffect(() => {
@@ -39,17 +36,33 @@ const Cats: React.FC<CatsProps> = ({ viewType }) => {
   let content;
   switch (viewType) {
     case 'carousel':
-      content = <CatCarousel />;
+      content = (
+        <Suspense fallback={<div>Loading...</div>}>
+          <CatCarousel />
+        </Suspense>
+      );
       break;
     case 'list':
-      content = <CatList />;
+      content = (
+        <Suspense fallback={<div>Loading...</div>}>
+          <CatList />
+        </Suspense>
+      );
       break;
     case 'cards':
-      content = <CatCards />;
+      content = (
+        <Suspense fallback={<div>Loading...</div>}>
+          <CatCards />
+        </Suspense>
+      );
       break;
     case 'grid':
     default:
-      content = <CatGrid />;
+      content = (
+        <Suspense fallback={<div>Loading...</div>}>
+          <CatGrid />
+        </Suspense>
+      );
       break;
   }
 

@@ -1,6 +1,5 @@
-// src/sections/Cats/Cats.test.tsx
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import React, { Suspense } from 'react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Cats from './Cats';
 import { Provider } from 'react-redux';
@@ -30,59 +29,67 @@ const createTestStore = () => {
 describe('Cats Component Tests', () => {
   beforeEach(() => {
     (useGetCatsQuery as jest.Mock).mockReturnValue({
-      data: [],
+      data: [{ id: '1', url: 'test-url' }],
       error: null,
       isLoading: false,
       refetch: jest.fn(),
     });
   });
 
-  test('renders Cats component with grid view', () => {
+  const renderWithSuspense = (component: JSX.Element) => {
+    return render(
+      <Suspense fallback={<div>Loading...</div>}>
+        {component}
+      </Suspense>
+    );
+  };
+
+  test('renders Cats component with grid view', async () => {
     const store = createTestStore();
 
-    render(
+    renderWithSuspense(
       <Provider store={store}>
         <Cats viewType="grid" />
       </Provider>
     );
 
-    expect(screen.getByTestId('cat-grid-view')).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByTestId('cat-grid-view')).toBeInTheDocument());
   });
 
-  test('renders Cats component with carousel view', () => {
+  test('renders Cats component with carousel view', async () => {
     const store = createTestStore();
 
-    render(
+    renderWithSuspense(
       <Provider store={store}>
         <Cats viewType="carousel" />
       </Provider>
     );
 
-    expect(screen.getByTestId('cat-carousel-view')).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByTestId('cat-carousel-view')).toBeInTheDocument());
   });
 
-  test('renders Cats component with list view', () => {
+  test('renders Cats component with list view', async () => {
     const store = createTestStore();
 
-    render(
+    renderWithSuspense(
       <Provider store={store}>
         <Cats viewType="list" />
       </Provider>
     );
 
-    expect(screen.getByTestId('cat-list-view')).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByTestId('cat-list-view')).toBeInTheDocument());
   });
 
-  test('renders Cats component with cards view', () => {
+  test('renders Cats component with cards view', async () => {
     const store = createTestStore();
 
-    render(
+    renderWithSuspense(
       <Provider store={store}>
         <Cats viewType="cards" />
       </Provider>
     );
 
-    expect(screen.getByTestId('cat-cards-view')).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByTestId('cat-cards-view')).toBeInTheDocument());
   });
 
   test('renders loading state', () => {
@@ -94,7 +101,7 @@ describe('Cats Component Tests', () => {
     });
 
     const store = createTestStore();
-    render(
+    renderWithSuspense(
       <Provider store={store}>
         <Cats viewType="grid" />
       </Provider>
@@ -112,7 +119,7 @@ describe('Cats Component Tests', () => {
     });
 
     const store = createTestStore();
-    render(
+    renderWithSuspense(
       <Provider store={store}>
         <Cats viewType="grid" />
       </Provider>

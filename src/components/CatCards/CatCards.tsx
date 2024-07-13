@@ -2,7 +2,7 @@ import React from 'react'
 import { useAppSelector } from '../../hooks/reduxHooks';
 import './CatCards.scss'
 
-export const CatCards:React.FC = () => {
+  const CatCards:React.FC = () => {
     const { cats } = useAppSelector((state) => state.cats) || [];
   return (
 <div className="CatCards" data-testid="cat-cards-view">
@@ -22,4 +22,4 @@ export const CatCards:React.FC = () => {
       </div>
   )
 }
-
+export default CatCards
