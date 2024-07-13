@@ -1,11 +1,20 @@
-# Flowbox-test
+# Flowbox-test-assignment
 
-This project was bootstrapped with Webpack and Babel.
+Objectives
+<ul>
+<li>Create a custom hook to fetch content (photos) from an API using Fetch AP (or mocking these calls with some predefined data).</li>
+<li>Store data from API in a global state using Context API, Redux, MobX, Zustand, or whichever state management method you prefer.</li>
+<li>Provide a way for the user to select the manner in which the content (photos) will be displayed (Grid, Carousel/Slider, list view and Cards). You don’t need to do it manually, and using third-party library(ies) is totally fine.</li>
+<li>User should be able to quickly change between these three different layout types</li>
+<li>Be sure to include unit testing using any framework of your choice.</li>
+<li>Create a github repo containing your app and share the link in an email once you have
+completed the task.</li>
+</ul>
 
-needs Node ">=18"
 
 ## Available Scripts
 
+**Needs Node ">=18" to run**</br>
 In the project directory, you can run:
 
 ### `yarn`
@@ -19,7 +28,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `yarn build`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run tests
+### `yarn test` 
