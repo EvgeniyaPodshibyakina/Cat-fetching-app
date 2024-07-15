@@ -1,3 +1,6 @@
+The Project uses Te Cat Api:
+https://thecatapi.com/
+
 # Flowbox-test-assignment
 
 Objectives
