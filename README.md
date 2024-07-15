@@ -1,4 +1,4 @@
-The Project uses Te Cat Api:
+The Project uses The Cat Api:
 https://thecatapi.com/
 
 # Flowbox-test-assignment
@@ -18,8 +18,10 @@ completed the task.</li>
 ## Available Scripts
 
 **Needs Node ">=18" to run**</br>
-In the project directory, you can run:
 
+Add .env file to your root directory and add your Api Key there as REACT_APP_API_KEY='YOUR_API_KEI'
+</br>
+In the project directory, you can run:
 ### `yarn`
 
 Download all the required node_modules
