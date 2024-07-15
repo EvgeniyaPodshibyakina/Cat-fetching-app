@@ -19,7 +19,7 @@ completed the task.</li>
 
 **Needs Node ">=18" to run**</br>
 
-Add .env file to your root directory and add your Api Key there as REACT_APP_API_KEY='YOUR_API_KEI'
+Add .env file to your root directory and add your Api Key there as REACT_APP_API_KEY='YOUR_API_KEY'
 </br>
 In the project directory, you can run:
 ### `yarn`
