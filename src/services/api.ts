@@ -14,7 +14,7 @@ const apiKey: string = process.env.REACT_APP_API_KEY as string;
 }),
   endpoints: (builder) => ({
     getCats: builder.query<ICat[], number>({
-      query: (limit = 10) => {
+      query: (limit = 20) => {
         console.log(`images/search?limit=${limit}`); // Log the query
         return `images/search?limit=${limit}`;
       },

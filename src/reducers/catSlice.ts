@@ -1,12 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ICat } from '../models/ICat';
 import { api } from '../services/api';
-
-export interface CatsState {
-  cats: ICat[];
-  status: 'idle' | 'loading' | 'succeeded' | 'failed';
-  error: string | null;
-}
+import { CatsState } from './types/CatState';
 
 export const initialState: CatsState = {
   cats: [],
