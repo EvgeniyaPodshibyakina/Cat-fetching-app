@@ -1,37 +1,88 @@
-The Project uses The Cat Api:
-https://thecatapi.com/
+# 🐱 Cat Fetching App
 
-# Flowbox-test-assignment
+A simple React application that fetches cat photos from [The Cat API](https://thecatapi.com/) and displays them in multiple layouts: Grid, Carousel, List, and Cards. Built for a frontend tech assignment, the app demonstrates state management, custom hooks, flexible UI rendering, and unit testing.
 
-Objectives
-<ul>
-<li>Create a custom hook to fetch content (photos) from an API using Fetch AP (or mocking these calls with some predefined data).</li>
-<li>Store data from API in a global state using Context API, Redux, MobX, Zustand, or whichever state management method you prefer.</li>
-<li>Provide a way for the user to select the manner in which the content (photos) will be displayed (Grid, Carousel/Slider, list view and Cards). You don’t need to do it manually, and using third-party library(ies) is totally fine.</li>
-<li>User should be able to quickly change between these three different layout types</li>
-<li>Be sure to include unit testing using any framework of your choice.</li>
-<li>Create a github repo containing your app and share the link in an email once you have
-completed the task.</li>
-</ul>
+---
 
+## 🚀 Tech Stack
 
-## Available Scripts
+- **React + TypeScript**
+- **Zustand** for global state
+- **Custom Hooks** for API data fetching
+- **Layout Switching**: Grid / Carousel / List / Cards
+- **React Slick** for carousel slider
+- **React Testing Library** + **Vitest** for unit testing
+- **CSS Modules** for styling
 
-**Needs Node ">=18" to run**</br>
+---
 
-Add .env file to your root directory and add your Api Key there as REACT_APP_API_KEY='YOUR_API_KEY'
-</br>
-In the project directory, you can run:
-### `yarn`
+## 🎯 Objectives
 
-Download all the required node_modules
-### `yarn start`
+- Create a custom hook to fetch cat images from an external API (or mock it).
+- Store data in a global state using a preferred method (Zustand used here).
+- Allow the user to switch between different view modes:
+  - Grid  
+  - Carousel  
+  - List  
+  - Cards  
+- Provide smooth toggling between view modes.
+- Include unit tests for major components and logic.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Getting Started
 
-To run tests
-### `yarn test` 
+### Prerequisites
+
+- Node.js (v18 or higher)  
+- Yarn
+
+### Setup
+
+1. **Clone the repo:**
+
+    ```bash
+    git clone https://github.com/your-username/cat-fetching-app.git
+    cd cat-fetching-app
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    yarn
+    ```
+
+3. **Create a `.env` file in the root directory and add your API key:**
+
+    ```env
+    REACT_APP_API_KEY=YOUR_API_KEY
+    ```
+
+4. **Start the development server:**
+
+    ```bash
+    yarn start
+    ```
+
+    The app will run at [http://localhost:3000](http://localhost:3000)
+
+5. **Run tests:**
+
+    ```bash
+    yarn test
+    ```
+
+---
+
+## 🧪 Testing
+
+Unit tests are written using **Vitest** and **React Testing Library**.  
+To run all tests:
+
+```bash
+yarn test
+```
+
+📦 API
+
+Powered by: The Cat API

@@ -2,7 +2,7 @@ import React, { lazy, Suspense ,useEffect } from 'react';
 import { useGetCatsQuery } from '../../services/api';
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks';
 import { CatsProps } from './types/CatsProps';
-// Lazy load components to split bundle and load them on demand
+
 const CatCards = lazy(() => import('../../components/CatCards/CatCards'));
 const CatGrid = lazy(() => import('../../components/CatGrid/CatGrid'));
 const CatCarousel = lazy(() => import('../../components/CatCarousel/CatCarousel'));
@@ -10,7 +10,7 @@ const CatList = lazy(() => import('../../components/CatList/CatList'));
 
 const Cats: React.FC<CatsProps> = ({ viewType }) => {
   const dispatch = useAppDispatch();
-  const { data, error, isLoading } = useGetCatsQuery(10); 
+  const { data, error, isLoading } = useGetCatsQuery(15); 
   const status = useAppSelector((state) => state.cats.status);  
   
 
