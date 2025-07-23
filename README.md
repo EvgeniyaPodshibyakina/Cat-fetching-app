@@ -55,7 +55,7 @@ A simple React application that fetches cat photos from [The Cat API](https://th
 3. **Create a `.env` file in the root directory and add your API key:**
 
     ```env
-    REACT_APP_API_KEY=YOUR_API_KEY
+    REACT_APP_API_KEY="YOUR_API_KEY"
     ```
 
 4. **Start the development server:**
