@@ -1,3 +1,4 @@
+Test assignment completed in 2024 as part of a job application
 # 🐱 Cat Fetching App
 
 A simple React application that fetches cat photos from [The Cat API](https://thecatapi.com/) and displays them in multiple layouts: Grid, Carousel, List, and Cards. Built for a frontend tech assignment, the app demonstrates state management, custom hooks, flexible UI rendering, and unit testing.
